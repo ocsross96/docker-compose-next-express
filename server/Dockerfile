@@ -1,6 +1,6 @@
 # server/Dockerfile
 
-# Use the official Node.js LTS (Long Term Support) image as the base image (slim version)
+# Use the official Node.js LTS (Long Term Support) image as the build image (slim version)
 FROM node:lts-slim AS BUILD_IMAGE
 
 # Set the working directory inside the container
@@ -18,18 +18,20 @@ COPY . .
 # Compile the application using typescript
 RUN npm run build
 
+# Start a new build phase
 FROM node:lts-slim AS FINAL_IMAGE
 ENV NODE_ENV=production
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the built output to the working directory
+# Copy only the built output we need to the working directory
 COPY --from=BUILD_IMAGE /app/package.json .
 COPY --from=BUILD_IMAGE /app/dist ./dist
 COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
 COPY --from=BUILD_IMAGE /app/.env .
 
+# Remove packages that are not required for production
 RUN npm prune --omit=dev
 
 # Set the command to start the Express server
