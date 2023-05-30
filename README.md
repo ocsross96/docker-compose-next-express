@@ -26,6 +26,5 @@ In dev mode the applications will all automatically recompile if you make any ch
 
 ### Node version
 
-We use the latest LTS version of node ([see download page](https://nodejs.org/en/download/)).
-Or use nvm if you want to support multiple node versions and easily switch between them.
-(See [nvm on Github](https://github.com/nvm-sh/nvm) or [nvm-window on Github](https://github.com/coreybutler/nvm-windows) if you are using Windows).
+We use nvm to manage multiple node versions and easily switch between them.
+(See [nvm on Github](https://github.com/nvm-sh/nvm) or [nvm-window on Github](https://github.com/coreybutler/nvm-windows) if you are using Windows). Install nvm and then the project contains an .nvmrc file to ensure we are all using the same version of node with the project.
