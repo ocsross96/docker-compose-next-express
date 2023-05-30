@@ -1,6 +1,6 @@
 # server/Dockerfile
 
-# Use the official Node.js LTS (Long Term Support) image as the base image
+# Use the official Node.js LTS (Long Term Support) image as the base image (slim version)
 FROM node:lts-slim
 
 # Set the working directory inside the container
