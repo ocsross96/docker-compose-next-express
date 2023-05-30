@@ -1,7 +1,7 @@
 # ai-experiment
 ai chatbot
 
-The project so far consists of two different Node applications ./client which is a Next JS application, and /server which is a Node and Express application. Both applications use Typescript.
+The project so far is a monorepo consisting of two different Node applications: /client which is a Next JS application, and /server which is a Node and Express application. Both applications use Typescript.
 
 ## Setup
 
@@ -24,7 +24,13 @@ Now the parts of the application can be accessed as follows:
 
 In dev mode the applications will all automatically recompile if you make any changes as the local file systems are mounted inside the docker containers.
 
+## Running the applications independently
+
+Alternatively you may run both applications in dev mode independently by changing directory into each folder (/client and /server) and running:
+1. ```npm install```
+2. ```npm run dev```
+
 ### Node version
 
 We use nvm to manage multiple node versions and easily switch between them.
-(See [nvm on Github](https://github.com/nvm-sh/nvm) or [nvm-window on Github](https://github.com/coreybutler/nvm-windows) if you are using Windows). Install nvm and then the project contains an .nvmrc file to ensure we are all using the same version of node with the project.
+(See [nvm on Github](https://github.com/nvm-sh/nvm) or [nvm-window on Github](https://github.com/coreybutler/nvm-windows) if you are using Windows). If you install nvm then project contains an .nvmrc file to ensure we are all using the same version of node with the project.
