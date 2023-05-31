@@ -1,8 +1,5 @@
-#  version of docker-compose
 version: "3.9"
-# types of containers
 services:
-  # name of container
   client:
     build:
       context: ./client
