@@ -1,5 +1,3 @@
-# client/Dockerfile
-
 # Use the official Node.js LTS (Long Term Support) image as the build image (slim version)
 FROM node:lts-slim AS BUILD_IMAGE
 
