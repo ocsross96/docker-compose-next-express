@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /*scroll-behavior - added for the initial Coral chat - can be removed if not needed*/
+  scroll-behavior: smooth;
 }
 
 a {
